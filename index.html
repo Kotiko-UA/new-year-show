@@ -17,7 +17,57 @@
 
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <!-- add to body class 'add-mood' -->
+  <body class="add-mood">
+    <section class="hero">
+      <div class="container">
+        <div class="toy"><img src="./img/tree-toy.png" alt="toy" /></div>
+        <div class="form-wrapper">
+          <h1 class="title">Перетвори свої мрії на реальність</h1>
+          <ul class="list">
+            <li class="list-item">
+              1. Впиши свою ціль та контакти у формі нижче.
+            </li>
+            <li class="list-item">
+              2. Щомісяця отримуй email з нагадуванням про ціль та корисні
+              поради.
+            </li>
+          </ul>
+          <form action="">
+            <label class="form-label" for="goal">Впиши тут свою ціль</label>
+            <input
+              class="form-input input-goal"
+              type="text"
+              name="goal"
+              id="goal"
+            />
+            <label class="form-label" for="name">Впиши тут своє ім’я</label>
+            <input
+              class="form-input input-name"
+              type="text"
+              name="name"
+              id="name"
+            />
+            <label class="form-label" for="email">Впиши тут свій еmail</label>
+            <input
+              class="form-input input-email"
+              type="email"
+              name="email"
+              id="email"
+            />
+            <button class="form-button" type="submit">Відправити</button>
+            <div class="compolite-text-wrap">
+              <img
+                class="complite-img"
+                src="./img/bi_check2-circle.svg"
+                alt=""
+              />
+              <p class="complite-text">Ваша ціль відправлена</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
