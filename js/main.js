@@ -5,11 +5,13 @@ form.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
   e.preventDefault();
-  window.setTimeout(() => {
+
+  setTimeout(() => {
     compliteText.style.display = 'flex';
     e.target.reset();
   }, 500);
-  window.setTimeout(() => {
+
+  setTimeout(() => {
     compliteText.style.display = 'none';
   }, 5000);
 }
@@ -21,21 +23,38 @@ const startBgdParallaxAnim = (e) => {
   const speed = bgd.getAttribute('data-speed');
   const { clientX: mouseX, clientY: mouseY } = e;
 
-  const x = (window.innerHeight - e.pageX * speed) / 100;
-  const y = (window.innerWidth - e.pageY * speed) / 100;
+  const x = (window.innerHeight - (mouseX) * speed) / 100;
+  const y = (window.innerWidth - mouseY * speed) / 100;
 
   bgd.style.transform = `translateX(${x}px) translateY(${y}px)`;
 };
 
+let prevX;
+let prevY;
+
 const startProjectorParallaxAnim = (e) => {
-  const projectors = document.querySelectorAll('.projector');
+  const projectors = document.querySelectorAll('.christmas-ball');
 
   projectors.forEach((projector) => {
     const speed = projector.getAttribute('data-speed');
     const { clientX: mouseX, clientY: mouseY } = e;
 
-    const x = (window.innerHeight - e.pageX * speed) / 100;
-    const y = (window.innerWidth - e.pageY * speed) / 100;
+    let x = (window.innerHeight - mouseX * speed) / 100;
+    let y = (window.innerWidth - mouseY * speed) / 100;
+
+    console.log('prevX: ', prevX);
+    console.log('prevY: ', prevY);
+
+    // if (!prevX) {
+    //   x = 0;
+    // }
+
+    // prevX = x;
+    // prevY = y;
+
+    // console.log('x: ', x);
+    // console.log('y: ', y);
+
 
     projector.style.transform = `translateX(${x}px) translateY(${y}px)`;
   });

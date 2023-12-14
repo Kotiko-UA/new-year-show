@@ -24,6 +24,14 @@ body .is-hidden {
     overflow: hidden;
 }
 
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
 img {
     display: block;
     width: 100%;
@@ -41,16 +49,14 @@ img {
     border-radius: 5px;
 }
 
-html {
-    height: 100%;
-}
-
+html,
 body {
     height: 100%;
 }
 
 .hero {
     position: relative;
+    height: 100%;
 }
 
 
@@ -60,7 +66,8 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-
+    background-image: url('../img/bg.svg');
+    background-size: cover;
 }
 
 .main-bgd {
@@ -73,21 +80,15 @@ body {
 
 .container {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1360px;
+    max-width: 1170px;
     height: 800px;
     display: flex;
     justify-content: center;
-    padding: 76px 95px 76px 66px;
+    /* padding: 76px 0 76px 0; */
 }
 
 .toy {
     position: relative;
-    width: 576px;
-    height: 576px;
-    display: block;
-    flex-shrink: 0.8;
 }
 
 .toy-img {
@@ -100,21 +101,23 @@ body {
     display: block;
     width: 140px;
     height: 140px;
-    right: 35px;
-    top: 0;
+    right: 14px;
+    top: -70px;
 }
 
-.small-toy-dawn {
+.small-toy-down {
     position: absolute;
     display: block;
     width: 75px;
     height: 75px;
-    right: 0;
+    right: -34px;
     bottom: 53px;
 }
 
 .form-wrapper {
     flex-shrink: 1.2;
+    margin-left: 74px;
+    width: 50%;
 }
 
 .title {
@@ -242,6 +245,9 @@ body {
 
 .add-mood {
     background-color: var(--dark-bg-col);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .add-mood .title {
