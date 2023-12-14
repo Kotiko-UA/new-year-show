@@ -8,7 +8,7 @@ function onSubmit(e) {
   window.setTimeout(() => {
     compliteText.style.display = 'flex';
     e.target.reset();
-  }, 1000);
+  }, 500);
   window.setTimeout(() => {
     compliteText.style.display = 'none';
   }, 5000);
