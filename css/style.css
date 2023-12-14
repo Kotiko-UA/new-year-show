@@ -41,11 +41,20 @@ img {
     border-radius: 5px;
 }
 
-.hero {
+html {
+    height: 100%;
+}
 
+body {
+    height: 100%;
+}
+
+.hero {
+    height: 100%;
     background-color: var(--light-text-col);
     background-image: url(../img/bg.png);
-
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
