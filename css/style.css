@@ -50,14 +50,29 @@ body {
 }
 
 .hero {
+    position: relative;
+}
+
+
+.main-bgd-frame {
+    position: absolute;
+    left: 0;
+    top: 0;
     height: 100%;
-    background-color: var(--light-text-col);
-    background-image: url(../img/bg.png);
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+
+}
+
+.main-bgd {
+    z-index: -1;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .container {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     max-width: 1360px;
@@ -68,6 +83,7 @@ body {
 }
 
 .toy {
+    position: relative;
     width: 576px;
     height: 576px;
     display: block;
@@ -77,6 +93,24 @@ body {
 .toy-img {
     display: block;
     width: 100%;
+}
+
+.small-toy-up {
+    position: absolute;
+    display: block;
+    width: 140px;
+    height: 140px;
+    right: 35px;
+    top: 0;
+}
+
+.small-toy-dawn {
+    position: absolute;
+    display: block;
+    width: 75px;
+    height: 75px;
+    right: 0;
+    bottom: 53px;
 }
 
 .form-wrapper {
@@ -206,7 +240,7 @@ body {
 
 }
 
-.add-mood .hero {
+.add-mood {
     background-color: var(--dark-bg-col);
 }
 
