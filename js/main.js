@@ -39,8 +39,8 @@ const startProjectorParallaxAnim = (e) => {
     const speed = projector.getAttribute('data-speed');
     const { clientX: mouseX, clientY: mouseY } = e;
 
-    let x = (window.innerHeight - mouseX * speed) / 100 + (10 * speed);
-    let y = (window.innerWidth - mouseY * speed) / 100 + (10 * speed);
+    let x = (window.innerHeight - mouseX * speed) / 100 + (5 * speed);
+    let y = (window.innerWidth - mouseY * speed) / 100 + (5 * speed);
 
     projector.style.transform = `translateX(${x}px) translateY(${y}px)`;
   });
