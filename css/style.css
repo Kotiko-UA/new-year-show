@@ -20,7 +20,13 @@
 }
 
 
-body .is-hidden {
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.is-hidden {
     overflow: hidden;
 }
 
@@ -245,9 +251,6 @@ body {
 
 .add-mood {
     background-color: var(--dark-bg-col);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .add-mood .title {
