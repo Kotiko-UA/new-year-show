@@ -30,12 +30,18 @@ body {
     overflow: hidden;
 }
 
-#snow-container {
+canvas {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+    z-index: 0;
+}
+
+.interactive {
+    position: relative;
+    z-index: 2;
 }
 
 img {
@@ -86,11 +92,9 @@ body {
 
 .container {
     position: relative;
-    max-width: 1170px;
+    width: 1170px;
     height: 800px;
     display: flex;
-    justify-content: center;
-    /* padding: 76px 0 76px 0; */
 }
 
 .toy {
@@ -249,11 +253,11 @@ li {
     background-color: var(--dark-bg-col);
 }
 
-.add-mood .title {
+.add-mood h1 {
     color: var(--light-tex-col);
 }
 
-.add-mood .list-item {
+.add-mood li {
     color: var(--light-tex-col);
 }
 

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body>
+  <body class="add-mood">
     <div class="main-bgd-frame" id="main-bgd" data-speed="7"></div>
 
       <div class="container">
@@ -45,7 +45,7 @@
         </div>
         <div class="form-wrapper">
         
-
+          <h1>Перетвори свої мрії на реальність</h1>
 
           <ul>
             <li>
@@ -61,26 +61,26 @@
           <form class="form">
             <label class="form-label" for="goal">Впиши тут свою ціль</label>
             <input
-              class="form-input input-goal"
+              class="form-input input-goal interactive"
               type="text"
               name="goal"
               id="goal"
             />
             <label class="form-label" for="name">Впиши тут своє ім’я</label>
             <input
-              class="form-input input-name"
+              class="form-input input-name interactive"
               type="text"
               name="name"
               id="name"
             />
             <label class="form-label" for="email">Впиши тут свій еmail</label>
             <input
-              class="form-input input-email"
+              class="form-input input-email interactive"
               type="email"
               name="email"
               id="email"
             />
-            <button class="form-button" type="submit">Відправити</button>
+            <button class="form-button interactive" type="submit">Відправити</button>
             <div class="compolite-text-wrap">
               <img
                 class="complite-img"
@@ -92,6 +92,8 @@
           </form>
         </div>
       </div>
+
+      <canvas id="snow-container"></canvas>
 
     <script src="js/main.js"></script>
     <script src="js/snow.js"></script>
