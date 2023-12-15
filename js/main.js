@@ -23,8 +23,8 @@ const startBgdParallaxAnim = (e) => {
   const speed = bgd.getAttribute('data-speed');
   const { clientX: mouseX, clientY: mouseY } = e;
 
-  const x = (window.innerHeight - (mouseX) * speed) / 100;
-  const y = (window.innerWidth - mouseY * speed) / 100;
+  const x = (window.innerWidth - (mouseX) * speed) / 100 - 100;
+  const y = (window.innerHeight - mouseY * speed) / 100;
 
   bgd.style.transform = `translateX(${x}px) translateY(${y}px)`;
 };
@@ -39,22 +39,8 @@ const startProjectorParallaxAnim = (e) => {
     const speed = projector.getAttribute('data-speed');
     const { clientX: mouseX, clientY: mouseY } = e;
 
-    let x = (window.innerHeight - mouseX * speed) / 100;
-    let y = (window.innerWidth - mouseY * speed) / 100;
-
-    console.log('prevX: ', prevX);
-    console.log('prevY: ', prevY);
-
-    // if (!prevX) {
-    //   x = 0;
-    // }
-
-    // prevX = x;
-    // prevY = y;
-
-    // console.log('x: ', x);
-    // console.log('y: ', y);
-
+    let x = (window.innerHeight - mouseX * speed) / 100 + (10 * speed);
+    let y = (window.innerWidth - mouseY * speed) / 100 + (10 * speed);
 
     projector.style.transform = `translateX(${x}px) translateY(${y}px)`;
   });
@@ -65,8 +51,8 @@ const startLogoAnim = (e) => {
   const speed = logo.getAttribute('data-speed');
   const { clientX: mouseX, clientY: mouseY } = e;
 
-  const x = (window.innerHeight - e.pageX * speed) / 100;
-  const y = (window.innerWidth - e.pageY * speed) / 100;
+  const x = (window.innerHeight - e.pageX * speed) / 100 - 50;
+  const y = (window.innerWidth - e.pageY * speed) / 100 - 40;
 
   logo.style.transform = `translateX(${x}px) translateY(${y}px)`;
 };

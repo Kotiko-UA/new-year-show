@@ -15,11 +15,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
-    <div class="main-bgd-frame" id="main-bgd" data-speed="7"></div>
+  <body class="add-mood">
+    <div class="main-bgd-frame">
+      <img
+        src="img/bgd.svg"
+        alt=""
+        class="main-bgd-img"
+        id="main-bgd"
+        data-speed="3"
+        style="transform: translateX(-100px)"
+      />
+    </div>
 
     <div class="container">
       <div class="toy">
@@ -28,7 +37,7 @@
           src="./img/ball.svg"
           alt="toy"
           id="main-toy-img"
-          data-speed="-1"
+          data-speed="-3"
         />
         <img
           class="small-toy-up christmas-ball"
@@ -44,9 +53,12 @@
         />
       </div>
       <div class="form-wrapper">
-      
+        <h1>Введи свою ціль 2024</h1>
+        <ul>
+          <li>Впиши свою ціль та контакти у формі нижче.</li>
+          <li>Отримай нагадування</li>
+        </ul>
 
-        
         <form class="form">
           <label class="form-label" for="goal">Впиши тут свою ціль</label>
           <input
@@ -72,13 +84,11 @@
             id="email"
             autocomplete="off"
           />
-          <button class="form-button interactive" type="submit">Відправити</button>
+          <button class="form-button interactive" type="submit">
+            Відправити
+          </button>
           <div class="compolite-text-wrap">
-            <img
-              class="complite-img"
-              src="./img/bi_check2-circle.svg"
-              alt=""
-            />
+            <img class="complite-img" src="./img/bi_check2-circle.svg" alt="" />
             <p class="complite-text">Ваша ціль відправлена</p>
           </div>
         </form>
